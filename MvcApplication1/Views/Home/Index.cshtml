@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div ng-controller="tabsController">
+    {{message}}
+    <div>
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="/homepage.htm">Home</a></li>
+            <li><a href="/about.htm">About</a></li>
+            <li><a href="#message">Messages</a></li>
+        </ul>
+    </div>
+    <div ng-view></div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $('#myTab a').click(function (e) {
+            $("#myTab").find("li[class*='active']").removeClass("active");
+            $(this).parent().attr('class',"active")
+        })
+    </script>
+}

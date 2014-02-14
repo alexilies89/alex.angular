@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html ng-app="singlePageApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/angularRoute")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/controllers/tabsController.js")
+</head>
+<body>
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
